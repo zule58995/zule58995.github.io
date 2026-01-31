@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Comercial Gómez</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🍊 Comercial Gómez</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+  <a onclick="mostrar('inicio')">Inicio</a>
+  <a onclick="mostrar('catalogo')">Productos</a>
+  <a onclick="mostrar('sobre')">Sobre nosotros</a>
+  <a onclick="mostrar('autores')">Autores</a>
+  <a href="#ubicacion">Contacto</a>
+</nav>
+
+</header>
+
+<!-- INICIO -->
+<section id="inicio" class="activo hero">
+  <div class="hero-content">
+    <h1 class="titulo-inicio">FRUTAS FRESCAS DIRECTO DEL CAMPO</h1>
+    <p>
+      En Comercial Gómez ofrecemos frutas frescas, seleccionadas cuidadosamente
+      para garantizar calidad, sabor y frescura en cada pedido.
+    </p>
+    <button class="btn-catalogo" onclick="mostrar('catalogo')">🍓 Ver catálogo</button>
+
+    <h2 class="titulo-destacadas">FRUTAS DESTACADAS</h2>
+    <div class="destacadas">
+      <div class="fruit-card"><img src="manzana.jpg"><span>MANZANA</span></div>
+      <div class="fruit-card"><img src="banana.jpg"><span>BANANO</span></div>
+      <div class="fruit-card"><img src="naranja.jpg"><span>NARANJA</span></div>
+      <div class="fruit-card"><img src="fresa.jpg"><span>FRESA</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ubicacion" id="ubicacion">
+
+  <h2>📍 Nuestra ubicación</h2>
+  <p>Páez / Guabo y Klever Franco</p>
+  <iframe src="https://www.google.com/maps?q=Paez%20Guabo%20Ecuador&output=embed"></iframe>
+</div>
+
+<!-- CATALOGO -->
+<section id="catalogo">
+  <h2>Nuestro catálogo</h2>
+  <p class="texto">
+    Contamos con una amplia variedad de frutas frescas disponibles por libra o kilo,
+    ideales para el consumo diario y pequeños negocios.
+  </p>
+  <input type="text" id="buscador" placeholder="🔍 Buscar fruta..." onkeyup="filtrar()">
+  <div class="grid" id="listaProductos"></div>
+  <button class="volver" onclick="mostrar('inicio')">⬅ Volver</button>
+</section>
+
+<!-- SOBRE NOSOTROS (MEJORADO) -->
+<section id="sobre">
+  <h2>Sobre Comercial Gómez</h2>
+
+  <p class="texto">
+    Comercial Gómez es un proyecto de grado desarrollado en la carrera de
+    Informática, cuyo propósito es simular una tienda virtual dedicada a la
+    venta de frutas frescas.
+  </p>
+
+  <p class="texto">
+    Este sitio web fue creado con la finalidad de aplicar los conocimientos
+    adquiridos en el área de desarrollo web, combinando diseño visual,
+    programación y funcionalidad.
+  </p>
+
+  <p class="texto">
+    La plataforma permite al usuario explorar un catálogo de productos,
+    seleccionar frutas por libra o kilo, agregarlas a un carrito de compras
+    y enviar pedidos de manera rápida y sencilla mediante WhatsApp.
+  </p>
+
+  <p class="texto">
+    Comercial Gómez busca ofrecer una experiencia amigable, clara y moderna,
+    promoviendo el consumo de productos frescos y locales mediante el uso
+    de herramientas tecnológicas.
+  </p>
+
+  <button class="volver" onclick="mostrar('inicio')">⬅ Volver al inicio</button>
+</section>
+
+<!-- AUTORES (MEJORADO) -->
+<section id="autores">
+  <h2>Autores del Proyecto</h2>
+  <p class="texto">
+    Proyecto desarrollado como requisito para la obtención del título de bachiller,
+    demostrando el uso de tecnologías web para la creación de una tienda virtual.
+  </p>
+
+  <div class="autores">
+    <!-- ZULE -->
+    <div class="autor-card">
+      <img src="zule.jpg">
+      <h4>Zuleika Dominguez</h4>
+      <p>
+        Programación en JavaScript y desarrollo de la lógica del sitio web.
+        Se encargó del funcionamiento del catálogo, carrito de compras,
+        cálculo de precios y envío de pedidos por WhatsApp.
+      </p>
+    </div>
+
+    <!-- IRA -->
+    <div class="autor-card">
+      <img src="ira.jpg">
+      <h4>Iratxe Paredes</h4>
+      <p>
+        Diseño visual y estructura HTML y CSS.
+        Responsable de la apariencia del sitio, animaciones,
+        colores, distribución de secciones y experiencia visual del usuario.
+      </p>
+    </div>
+  </div>
+
+  <button class="volver" onclick="mostrar('inicio')">⬅ Volver al inicio</button>
+</section>
+
+
+<!-- CARRITO -->
+<div class="carrito" id="carrito">
+  <h3>🛒 Carrito</h3>
+  <input type="text" id="nombre" placeholder="Tu nombre">
+  <ul id="carritoLista"></ul>
+  <strong>Total: $<span id="total">0.00</span></strong>
+  <button onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
