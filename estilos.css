@@ -1,5 +1,3 @@
-
-/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
@@ -11,8 +9,6 @@ body{
   background:#fff7ec;
   color:#333;
 }
-
-/* ================= HEADER ================= */
 header{
   display:flex;
   justify-content:space-between;
@@ -51,7 +47,6 @@ nav a:hover{
   background:#ffd180;
 }
 
-/* ================= MENU RESPONSIVE ================= */
 @media(max-width:768px){
   .menu-toggle{display:block}
   nav{
@@ -68,7 +63,6 @@ nav a:hover{
   nav.show{display:flex}
 }
 
-/* ================= SECCIONES ================= */
 section{
   display:none;
   padding:70px 20px;
@@ -86,7 +80,6 @@ section.activo{
   text-align:center;
 }
 
-/* ================= INICIO ================= */
 #inicio{display:none;}
 
 #inicio.activo{
@@ -106,7 +99,6 @@ section.activo{
   animation:fade .8s ease;
 }
 
-/* TITULO */
 .hero h1{
   font-family:'Playfair Display', serif;
   font-size:46px;
@@ -115,13 +107,11 @@ section.activo{
   margin-bottom:15px;
 }
 
-/* TEXTO */
 .hero p{
   font-size:18px;
   margin-bottom:20px;
 }
 
-/* BOTON CATALOGO */
 .btn-catalogo{
   padding:16px 42px;
   border:none;
@@ -139,7 +129,6 @@ section.activo{
   box-shadow:0 18px 35px rgba(0,0,0,.45);
 }
 
-/* DESTACADAS */
 .titulo-destacadas{
   margin-top:35px;
   font-family:'Playfair Display', serif;
@@ -180,7 +169,6 @@ section.activo{
   font-weight:700;
 }
 
-/* ================= UBICACION ================= */
 .ubicacion{
   margin:50px auto;
   max-width:900px;
@@ -199,7 +187,6 @@ section.activo{
   margin-top:15px;
 }
 
-/* ================= CATALOGO ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -251,7 +238,6 @@ section.activo{
   border:1px solid #ccc;
 }
 
-/* ================= BUSCADOR ================= */
 #buscador{
   width:100%;
   max-width:420px;
@@ -270,9 +256,6 @@ section.activo{
   transform:scale(1.03);
 }
 
-/* ================= AUTORES ================= */
-/* ====== AUTORES (SOLO ESTA SECCIÓN) ====== */
-
 .autores{
   display:flex;
   justify-content:center;
@@ -288,7 +271,7 @@ section.activo{
   width:260px;
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,.25);
-  border-bottom:6px solid #ff9800; /* color de tu página */
+  border-bottom:6px solid #ff9800; 
   transition:.3s ease;
 }
 
@@ -319,7 +302,6 @@ section.activo{
 }
 
 
-/* ================= CARRITO ================= */
 .carrito{
   display:none;
   position:fixed;
@@ -358,7 +340,6 @@ section.activo{
   transform:scale(1.08);
 }
 
-/* ================= BOTON VOLVER ================= */
 .volver{
   margin-top:30px;
   padding:12px 34px;
@@ -374,7 +355,6 @@ section.activo{
   transform:scale(1.1);
 }
 
-/* ================= ANIMACIONES ================= */
 @keyframes float{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
@@ -389,9 +369,7 @@ section.activo{
   from{opacity:0;transform:translateY(20px)}
   to{opacity:1;transform:translateY(0)}
 }
-/* ================= TITULOS DE SECCIONES ================= */
 
-/* Nuestro catálogo */
 #catalogo h2{
   font-family:'Playfair Display', serif;
   text-transform:uppercase;
@@ -402,7 +380,6 @@ section.activo{
   margin-bottom:15px;
 }
 
-/* Sobre Comercial Gómez */
 #sobre h2{
   font-family:'Playfair Display', serif;
   text-transform:uppercase;
@@ -413,7 +390,6 @@ section.activo{
   margin-bottom:15px;
 }
 
-/* Autores del Proyecto */
 #autores h2{
   font-family:'Playfair Display', serif;
   text-transform:uppercase;
@@ -423,7 +399,7 @@ section.activo{
   color:#ff5722;
   margin-bottom:15px;
 }
-/* ===== MENU DESPLEGABLE ANIMADO ===== */
+
 @media(max-width:768px){
   nav{
     display:none;
@@ -458,4 +434,103 @@ section.activo{
     opacity:1;
     transform:translateY(0);
   }
+}
+
+@media (max-width: 768px){
+
+  #inicio.activo{
+    height:auto;              
+    min-height:100vh;
+    padding:90px 15px 40px;
+    background-position:center top;
+  }
+
+  .hero-content{
+    padding:25px 18px;
+    border-radius:20px;
+  }
+
+  .hero h1{
+    font-size:28px;
+    letter-spacing:2px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .btn-catalogo{
+    padding:14px 28px;
+    font-size:16px;
+  }
+
+  .titulo-destacadas{
+    font-size:22px;
+    margin-top:25px;
+  }
+
+  .destacadas{
+    gap:15px;
+  }
+
+  .fruit-card{
+    width:120px;
+    padding:14px;
+  }
+
+  .fruit-card img{
+    width:80px;
+    height:80px;
+  }
+
+  .fruit-card span{
+    font-size:14px;
+  }
+}
+
+.autor-card{
+  opacity:0;
+  transform:translateY(30px);
+  animation:autorFade .8s ease forwards;
+}
+
+.autor-card:nth-child(1){animation-delay:.2s;}
+.autor-card:nth-child(2){animation-delay:.4s;}
+.autor-card:nth-child(3){animation-delay:.6s;}
+
+@keyframes autorFade{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+.autor-card img{
+  animation: flotarAutor 3s ease-in-out infinite;
+}
+
+.autor-card:nth-child(1) img{
+  animation-delay: 0s;
+}
+
+.autor-card:nth-child(2) img{
+  animation-delay: 0.8s;
+}
+
+.autor-card:nth-child(3) img{
+  animation-delay: 1.6s;
+}
+
+@keyframes flotarAutor{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.ubicacion{
+  display:block;
 }

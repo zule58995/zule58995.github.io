@@ -15,16 +15,14 @@
   <div class="logo">🍊 Comercial Gómez</div>
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   <nav id="nav">
-  <a onclick="mostrar('inicio')">Inicio</a>
-  <a onclick="mostrar('catalogo')">Productos</a>
-  <a onclick="mostrar('sobre')">Sobre nosotros</a>
-  <a onclick="mostrar('autores')">Autores</a>
-  <a href="#ubicacion">Contacto</a>
-</nav>
-
+    <a onclick="mostrar('inicio')">Inicio</a>
+    <a onclick="mostrar('catalogo')">Productos</a>
+    <a onclick="mostrar('sobre')">Sobre nosotros</a>
+    <a onclick="mostrar('autores')">Autores</a>
+    <a onclick="mostrar('contacto')">Contacto</a>
+  </nav>
 </header>
 
-<!-- INICIO -->
 <section id="inicio" class="activo hero">
   <div class="hero-content">
     <h1 class="titulo-inicio">FRUTAS FRESCAS DIRECTO DEL CAMPO</h1>
@@ -45,13 +43,11 @@
 </section>
 
 <div class="ubicacion" id="ubicacion">
-
   <h2>📍 Nuestra ubicación</h2>
-  <p>Páez / Guabo y Klever Franco</p>
+  <p>Páez / Guabo y Kleber Franco</p>
   <iframe src="https://www.google.com/maps?q=Paez%20Guabo%20Ecuador&output=embed"></iframe>
 </div>
 
-<!-- CATALOGO -->
 <section id="catalogo">
   <h2>Nuestro catálogo</h2>
   <p class="texto">
@@ -63,63 +59,75 @@
   <button class="volver" onclick="mostrar('inicio')">⬅ Volver</button>
 </section>
 
-<!-- SOBRE NOSOTROS (MEJORADO) -->
+<!-- 🔴 ÚNICA SECCIÓN MODIFICADA -->
 <section id="sobre">
   <h2>Sobre Comercial Gómez</h2>
 
   <p class="texto">
-    Comercial Gómez es un proyecto de grado desarrollado en la carrera de
-    Informática, cuyo propósito es simular una tienda virtual dedicada a la
-    venta de frutas frescas.
+    Comercial Gómez inició como un pequeño negocio familiar dedicado a la venta
+    de frutas frescas, surgido con el objetivo de ofrecer productos de calidad
+    directamente del campo a la comunidad local.
   </p>
 
   <p class="texto">
-    Este sitio web fue creado con la finalidad de aplicar los conocimientos
-    adquiridos en el área de desarrollo web, combinando diseño visual,
-    programación y funcionalidad.
+    Desde sus inicios, el comercial se caracterizó por brindar atención cercana,
+    precios accesibles y productos frescos, logrando ganarse la confianza de
+    sus clientes y consolidarse como un negocio responsable y comprometido.
   </p>
 
   <p class="texto">
-    La plataforma permite al usuario explorar un catálogo de productos,
-    seleccionar frutas por libra o kilo, agregarlas a un carrito de compras
-    y enviar pedidos de manera rápida y sencilla mediante WhatsApp.
+    Con el crecimiento del comercial y el avance de la tecnología, nace la idea
+    de desarrollar una tienda virtual como proyecto de grado en la carrera de
+    Informática, con la finalidad de modernizar el negocio y mejorar el proceso
+    de atención al cliente.
   </p>
 
   <p class="texto">
-    Comercial Gómez busca ofrecer una experiencia amigable, clara y moderna,
-    promoviendo el consumo de productos frescos y locales mediante el uso
-    de herramientas tecnológicas.
+    Este sitio web fue creado para simular el funcionamiento de una tienda real,
+    permitiendo al usuario explorar el catálogo de productos y enviar pedidos
+    de forma rápida y sencilla mediante WhatsApp.
   </p>
 
   <button class="volver" onclick="mostrar('inicio')">⬅ Volver al inicio</button>
 </section>
 
-<!-- AUTORES (MEJORADO) -->
 <section id="autores">
   <h2>Autores del Proyecto</h2>
   <p class="texto">
-    Proyecto desarrollado como requisito para la obtención del título de bachiller,
-    demostrando el uso de tecnologías web para la creación de una tienda virtual.
+    El presente proyecto fue desarrollado como requisito académico para la obtención
+    del título de bachiller, con el objetivo de aplicar de manera práctica los
+    conocimientos adquiridos en el área de Informática. A través de este trabajo se
+    implementaron tecnologías web como HTML, CSS y JavaScript, permitiendo el diseño
+    y desarrollo de una tienda virtual funcional, interactiva y visualmente atractiva.
+    El proyecto evidencia el trabajo colaborativo, la organización de tareas y el uso
+    responsable de herramientas tecnológicas orientadas a la solución de necesidades
+    reales.
   </p>
 
   <div class="autores">
-    <!-- ZULE -->
+    <div class="autor-card">
+      <img src="corina.jpg">
+      <h4>Jennifer Cruz</h4>
+      <p>
+      Documentación del proyecto y redacción de contenidos.
+       Participó en la elaboración del informe escrito, organización de secciones,
+        conclusiones y apoyo en la presentación final.
+      </p>
+    </div>
     <div class="autor-card">
       <img src="zule.jpg">
       <h4>Zuleika Dominguez</h4>
       <p>
-        Programación en JavaScript y desarrollo de la lógica del sitio web.
+        Elaboración de JavaScript y desarrollo de la lógica del sitio web.
         Se encargó del funcionamiento del catálogo, carrito de compras,
         cálculo de precios y envío de pedidos por WhatsApp.
       </p>
     </div>
-
-    <!-- IRA -->
     <div class="autor-card">
       <img src="ira.jpg">
       <h4>Iratxe Paredes</h4>
       <p>
-        Diseño visual y estructura HTML y CSS.
+       Diseño visual y estructura HTML y CSS.
         Responsable de la apariencia del sitio, animaciones,
         colores, distribución de secciones y experiencia visual del usuario.
       </p>
@@ -129,8 +137,6 @@
   <button class="volver" onclick="mostrar('inicio')">⬅ Volver al inicio</button>
 </section>
 
-
-<!-- CARRITO -->
 <div class="carrito" id="carrito">
   <h3>🛒 Carrito</h3>
   <input type="text" id="nombre" placeholder="Tu nombre">
